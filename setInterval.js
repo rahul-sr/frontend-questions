@@ -1,6 +1,7 @@
 /**
  * Timer is a custom implementation of SetInterval and ClearInterval method
- * which executes a callback at a regular interval until its cleared using ClearInterval
+ * which executes a callback at a regular interval using customSetInterval
+ * until its cleared using customClearInterval
  */
 
  const timer = (function () {
