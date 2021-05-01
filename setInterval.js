@@ -1,14 +1,17 @@
 /**
- * customSetInterval is a custom implementation of SetInterval method
- * which executes a callback at a regular interval until its cleared
- * @param {*} cb - the callback to be executed at the specific interval
- * @param {*} waitMs - the interval in milliseconds
- * @returns - the timerId to clear the customSetInterval
+ * Timer is a custom implementation of SetInterval and ClearInterval method
+ * which executes a callback at a regular interval until its cleared using ClearInterval
  */
 
  const timer = (function () {
   let clearIntervalTimerMap = {};
 
+  /**
+   * customSetInterval is a custom implementation of SetInterval
+   * @param {*} cb - the callback to be executed at the specific interval
+   * @param {*} waitMs - the interval in milliseconds
+   * @returns - the timerId to clear the customSetInterval
+   */
   function customSetInterval(cb, waitMs) {
     let timerId;
     const helper = () => {
@@ -23,6 +26,11 @@
 
     return helper();
   }
+
+  /**
+   * customClearInterval is a custom implementation of clearInterval
+   * @param {*} timerId - to clear the existing setInterval method using its timerID returned
+   */
 
   function customClearInterval(timerId) {
     clearIntervalTimerMap[timerId] = true;
