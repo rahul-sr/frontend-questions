@@ -12,3 +12,10 @@ addition of external toolbar items.
 3. For Q1, Q3 - Under the dropdown-menu and toolbar folder, index.html file is present. Open the index.html files in the browser.
 4. For Q2 - Copy the code in setInterval.js file and run it in browser console or any javascript compiler.
 
+# ScreenShots
+1. ![Screen Shot 2021-05-01 at 5 27 48 PM](https://user-images.githubusercontent.com/16071840/116781750-9cfa3800-aaa2-11eb-9c75-bb40e4f94de6.png)
+
+
+2. ![Screen Shot 2021-05-01 at 5 28 31 PM](https://user-images.githubusercontent.com/16071840/116781758-b00d0800-aaa2-11eb-97c6-536e804288ef.png)
+
+
