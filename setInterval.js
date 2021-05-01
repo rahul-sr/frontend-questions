@@ -5,18 +5,39 @@
  * @param {*} waitMs - the interval in milliseconds
  * @returns - the timerId to clear the customSetInterval
  */
-function customSetInterval(cb, waitMs) {
-  const helper = () => {
-    const timerId = setTimeout(() => {
-      cb();
-      helper();
-    }, waitMs);
-    return timerId;
-  };
 
-  return helper();
-}
+ const timer = (function () {
+  let clearIntervalTimerMap = {};
+
+  function customSetInterval(cb, waitMs) {
+    let timerId;
+    const helper = () => {
+      if(!clearIntervalTimerMap[timerId]){
+        timerId = setTimeout(() => {
+          cb();
+          helper();
+        }, waitMs);
+        return timerId;
+      }
+    };
+
+    return helper();
+  }
+
+  function customClearInterval(timerId) {
+    clearIntervalTimerMap[timerId] = true;
+    clearTimeout(timerId);
+  }
+
+  return {
+    customSetInterval,
+    customClearInterval
+  }
+
+}());
+
+
 
 // For testing the method
-customSetInterval(() => {console.log('message')}, 2000);
-
+const timerID = timer.customSetInterval(() => { console.log('message') }, 2000);
+//timer.customClearInterval(timerID);
