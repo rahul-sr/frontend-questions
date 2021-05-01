@@ -18,7 +18,7 @@ addition of external toolbar items.
  
 2. Toolbar
  
- ![Screen Shot 2021-05-01 at 5 28 31 PM](https://user-images.githubusercontent.com/16071840/116781789-ed719580-aaa2-11eb-8017-2ad2ee39a1f4.png)
+  ![Screen Shot 2021-05-01 at 5 28 31 PM](https://user-images.githubusercontent.com/16071840/116781789-ed719580-aaa2-11eb-8017-2ad2ee39a1f4.png)
 
 
 
